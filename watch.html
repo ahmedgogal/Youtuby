@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>يوتيوبى | مشاهدة</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css"
+            integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="improve.css">
+    </head>
+    <body class="mt-5">
+        <div class="layer"></div>
+        <div id="top-menu">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+                    <i class="fas fa-bars fa-lg" id="toggler"></i>
+                    <i class="fas fa-list fa-lg" id="togg"></i>
+                    <b>
+                        <a class="navbar-brand pl-2" href="index.html">
+                            يوتيوبى
+                            <span class="video-icon">
+                                <i class="fas fa-play-circle"></i>
+                            </span>
+                        </a>
+                    </b>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item pr-1">
+                                <a class="nav-link" href="index.html">
+                                    الفيديوهات المقترحة
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item pr-1">
+                                <a class="nav-link" href="#">المرفوعة حديثا</a>
+                            </li>
+                            <li class="nav-item pr-1">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                >الفيديوهات الرائجة</a>
+                            </li>
+                        </ul>
+                        <div class="form-inline my-2 my-lg-0">
+                            <input
+                                class="form-control mr-sm-2"
+                                type="search"
+                                placeholder="ابحث هنا"
+                                aria-label="Search"
+                            >
+                            <button onclick="location.href='search.html';" class="btn btn-outline-danger my-2 my-sm-0" type="submit">ابحث</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-search mr-3 search-icon"></i>
+                    <a
+                        class="nav-link login"
+                        href="#"
+                        tabindex="-1"
+                        aria-disabled="true"
+                        data-toggle="modal"
+                        data-target="#loginModal"
+                    >تسجيل الدخول</a>
+                </nav>
+                <input type="search" class="form-control search-input" placeholder="ابحث هنا">
+                <!-- Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="email" class="col-form-label">البريد الالكترونى</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="col-form-label">كلمة المرور</label>
+                                        <input type="password" class="form-control" id="password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="text-danger">نسيت كلمة المرور</a>
+                                <a href="#" class="mx-auto text-danger">إنشاء حساب</a>
+                                <button type="button" class="btn btn-danger">دخول</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                    <div id="wrap">
+                        <div class="sidebar">
+                            <ul class="list-group list-group-flush">
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fas fa-home purple mr-1"></i>
+                                    الصفحة الرئيسية
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-list purple mr-1"></i>
+                                    الفيديوهات المقترحة
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-cloud-arrow-up purple mr-1"></i>
+                                    المرفوعة حديثا
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-arrow-trend-up purple mr-1"></i>
+                                    الفيديوهات الرائجة
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-video purple mr-1"></i>
+                                    فيديوهاتى
+                                </a>
+                                <a href="log.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-clock-rotate-left purple mr-1"></i>
+                                    سجل المشاهدة
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-user-plus purple mr-1"></i>
+                                    الإشتراكات
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-film purple mr-1"></i>
+                                    الأفلام والعروض
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-gamepad purple mr-1"></i>
+                                    ألعاب فيديو
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-shirt purple mr-1"></i>
+                                    الموضة والجمال
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-school-flag purple mr-1"></i>
+                                    محتوى تعليمى
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-gear purple mr-1"></i>
+                                    الإعدادات
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-regular fa-circle-play purple mr-1"></i>
+                                    قوائم التشغيل
+                                </a>
+                                <a href="index.html" class="list-group-item list-group-item-action">
+                                    <i class="fa-solid fa-handshake-angle purple mr-1"></i>
+                                    مساعدة
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-page pt-5">
+            <div class="container-fluid">
+                <div class="card mx-auto col-12 p-0 border-0">
+                    <div class="row no-gutters px-3">
+                        <div class="col-lg-7">
+                            <a href="watch.html">
+                                <video
+                                    class="w-100"
+                                    src="img/FULL.018.mp4"
+                                    controls
+                                    poster="img/thumbnail/1.jpg"
+                                ></video>
+                            </a>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="card-body p-2">
+                                <small class="text-muted mx-2">
+                                    <i class="fa-solid fa-film"></i>
+                                    <span>5 الاف مشاهدة</span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>قبل يومين</span>
+                                    <a href="channel.html" class="channel-img ">
+                                        <img
+                                            src="img/logo.png"
+                                            alt="channel image"
+                                            class="rounded-circle ml-3"
+                                            width="25px"
+                                        >
+                                        <span class="card-text">لا ي كورة لااا</span>
+                                    </a>
+                                </small>
+                                <a href="watch.html">
+                                    <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                </a>
+                                <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد ليعلن تقدم ليفربول على نظيره السيتى</p>
+                            </div>
+                            <div class="watch-icons p-3">
+                                <i class="far fa-heart bg-danger text-white p-1 mr-1" title="أحببته"></i>
+                                <i class="far fa-clock bg-danger text-white p-1 mr-1" title="المشاهدة لاحقا"></i>
+                                <i class="far fa-share-square bg-danger text-white p-1 mr-1" title="مشاركة"></i>
+                                <i class="far fa-play-circle bg-danger text-white p-1 mr-1" title="إضافة الى قائمة التشغيل"></i>
+                                <span class="ml-3">إبلاغ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-4 px-3">
+                    <div class="col-lg-7 order-2 order-lg-1">
+                        <div class="comments">
+                            <div class="comments-details mb-3">
+                                <span>التعليقات 4</span>
+                                <span class="dropdown">
+                                    <button
+                                        class="btn btn-outline-danger dropdown-toggle"
+                                        type="button"
+                                        id="dropdownMenuButton"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        الترتيب بحسب
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">التاريخ</a>
+                                        <a class="dropdown-item" href="#">التعليقات الأحدث</a>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="public-comments">
+                                <div class="form-group">
+                                    <textarea
+                                        class="form-control"
+                                        id="exampleFormControlTextarea1"
+                                        rows="4"
+                                        placeholder="إضافة تعليق"
+                                    ></textarea>
+                                    <button type="submit" class="btn btn-danger my-3">تعليق</button>
+                                    <!-- Comments -->
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
+                                                    <p class="text-secondary text-center">منذ 50 دقيقة</p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <p>
+                                                        <a class="float-left" href="#">
+                                                            <strong>أحمد مالك</strong>
+                                                        </a>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                    </p>
+                                                    <div class="clearfix"></div>
+                                                    <p>الله ينور الفيديو حلو جدا</p>
+                                                    <p>
+                                                        <a class="float-left btn btn-outline-danger mr-2 reply">
+                                                            <i class="fa fa-reply"></i>
+                                                            رد
+                                                        </a>
+                                                        <a class="float-left btn text-white btn-danger">
+                                                            <i class="fa fa-heart"></i>
+                                                            أحببته
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-inner ml-5">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <img src="img/logo.png" class="img img-rounded img-fluid">
+                                                            <p class="text-secondary text-center">منذ 20 دقيقة</p>
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <p>
+                                                                <a href="#">
+                                                                    <strong>لا ي كورة لاااا</strong>
+                                                                </a>
+                                                            </p>
+                                                            <p>شكرا تسلم</p>
+                                                            <p>
+                                                                <a class="float-right btn btn-outline-danger ml-2 reply">
+                                                                    <i class="fa fa-reply"></i>
+                                                                    رد
+                                                                </a>
+                                                                <a class="float-right btn text-white btn-danger">
+                                                                    <i class="fa fa-heart"></i>
+                                                                    أحببته
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
+                                                    <p class="text-secondary text-center">منذ 50 دقيقة</p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <p>
+                                                        <a class="float-left" href="#">
+                                                            <strong>أحمد مالك</strong>
+                                                        </a>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                    </p>
+                                                    <div class="clearfix"></div>
+                                                    <p>الله ينور الفيديو حلو جدا</p>
+                                                    <p>
+                                                        <a class="float-left btn btn-outline-danger mr-2 reply">
+                                                            <i class="fa fa-reply"></i>
+                                                            رد
+                                                        </a>
+                                                        <a class="float-left btn text-white btn-danger">
+                                                            <i class="fa fa-heart"></i>
+                                                            أحببته
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-inner ml-5">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <img src="img/logo.png" class="img img-rounded img-fluid">
+                                                            <p class="text-secondary text-center reply-time">منذ 20 دقيقة</p>
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <p>
+                                                                <a href="#">
+                                                                    <strong>لا ي كورة لاااا</strong>
+                                                                </a>
+                                                            </p>
+                                                            <p>شكرا تسلم</p>
+                                                            <p>
+                                                                <a class="float-right btn btn-outline-danger ml-2 reply">
+                                                                    <i class="fa fa-reply"></i>
+                                                                    رد
+                                                                </a>
+                                                                <a class="float-right btn text-white btn-danger">
+                                                                    <i class="fa fa-heart"></i>
+                                                                    أحببته
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
+                                                    <p class="text-secondary text-center reply-time">منذ 50 دقيقة</p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <p>
+                                                        <a class="float-left" href="#">
+                                                            <strong>أحمد مالك</strong>
+                                                        </a>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                    </p>
+                                                    <div class="clearfix"></div>
+                                                    <p>الله ينور الفيديو حلو جدا</p>
+                                                    <p>
+                                                        <a class="float-left btn btn-outline-warning mr-2 reply">
+                                                            <i class="fa fa-reply"></i>
+                                                            رد
+                                                        </a>
+                                                        <a class="float-left btn text-white btn-danger">
+                                                            <i class="fa fa-heart"></i>
+                                                            أحببته
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-inner ml-5">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <img src="img/logo.png" class="img img-rounded img-fluid">
+                                                            <p class="text-secondary text-center reply-time">منذ 20 دقيقة</p>
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <p>
+                                                                <a href="#">
+                                                                    <strong>لا ي كورة لاااا</strong>
+                                                                </a>
+                                                            </p>
+                                                            <p>شكرا تسلم</p>
+                                                            <p>
+                                                                <a class="float-right btn btn-outline-warning ml-2 reply">
+                                                                    <i class="fa fa-reply"></i>
+                                                                    رد
+                                                                </a>
+                                                                <a class="float-right btn text-white btn-danger">
+                                                                    <i class="fa fa-heart"></i>
+                                                                    أحببته
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid">
+                                                    <p class="text-secondary text-center reply-time">منذ 50 دقيقة</p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <p>
+                                                        <a class="float-left" href="#">
+                                                            <strong>أحمد مالك</strong>
+                                                        </a>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                        <span class="float-right">
+                                                            <i class="text-warning fa fa-star"></i>
+                                                        </span>
+                                                    </p>
+                                                    <div class="clearfix"></div>
+                                                    <p>الله ينور الفيديو حلو جدا</p>
+                                                    <p>
+                                                        <a class="float-left btn btn-outline-warning mr-2">
+                                                            <i class="fa fa-reply"></i>
+                                                            رد
+                                                        </a>
+                                                        <a class="float-left btn text-white btn-danger">
+                                                            <i class="fa fa-heart"></i>
+                                                            أحببته
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-inner ml-5">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <img src="img/logo.png" class="img img-rounded img-fluid">
+                                                            <p class="text-secondary text-center reply-time">منذ 20 دقيقة</p>
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <p>
+                                                                <a href="#">
+                                                                    <strong>لا ي كورة لاااا</strong>
+                                                                </a>
+                                                            </p>
+                                                            <p>شكرا تسلم</p>
+                                                            <p>
+                                                                <a class="float-right btn btn-outline-warning ml-2">
+                                                                    <i class="fa fa-reply"></i>
+                                                                    رد
+                                                                </a>
+                                                                <a class="float-right btn text-white btn-danger">
+                                                                    <i class="fa fa-heart"></i>
+                                                                    أحببته
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-1 order-lg-2">
+                        <p>الإقتراحات</p>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card my-3 col-12 p-0">
+                            <div class="row no-gutters ">
+                                <div class="col-sm-5">
+                                    <a href="watch.html">
+                                        <img src="img/thumbnail/FULL.SI.019.jpg" class="card-img w-100" alt="card image">
+                                    </a>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="card-body p-2">
+                                        <a href="watch.html">
+                                            <h4 class="card-title mx-2">ليفربول يلحق الهزيمة بالسيتى</h4>
+                                        </a>
+                                        <p class="card-text mx-2">فى مباراة مثيرة شهدت عودة الملك المصرى محمد صلاح ليضرب من جديد ويهز شباك السيتى بهدف نظيف دون رد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/8d40ce3208.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="improve.js"></script>
+    </body>
+</html>
